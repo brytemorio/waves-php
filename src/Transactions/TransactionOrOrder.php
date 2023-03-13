@@ -21,7 +21,7 @@ class TransactionOrOrder extends JsonBase
      * @var array<int, string>
      */
     private array $proofs;
-    private string $bodyBytes;
+    protected string $bodyBytes;
 
     function id(): Id
     {

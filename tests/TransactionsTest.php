@@ -42,11 +42,15 @@ use Waves\Transactions\TransferTransaction;
 use Waves\Transactions\UpdateAssetInfoTransaction;
 use Waves\Util\Functions;
 
+
+
+
 class TransactionsTest extends \PHPUnit\Framework\TestCase
 {
     const WAVES_FOR_TEST = 500000000;
     const SPONSOR_ID = 'SPONSOR_ID';
     const TOKEN_ID = 'TOKEN_ID';
+
 
     private ChainId $chainId;
     private Node $node;
@@ -55,8 +59,12 @@ class TransactionsTest extends \PHPUnit\Framework\TestCase
     private AssetId $sponsorId;
     private AssetId $tokenId;
 
+    /**
+     * @throws Exception
+     */
     private function prepare(): void
     {
+
         if( isset( $this->chainId ) )
             return;
 
